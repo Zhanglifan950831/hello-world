@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>随便咯</title>
+<link rel="stylesheet" href="../css/reset.css" type="text/css">
+<link rel="stylesheet" href="../css/main.css" type="text/css">
+<script src="../js/jquery-3.1.1.min.js"></script>
+<script src="../js/common.js"></script>
+<script>
+$(function(){
+	$('#header').load('header.php',function(){
+		$('#nav li:eq(2)>a').addClass('active');
+		if(sessionStorage.getItem('userInfo'))
+        {
+            $('#top a').removeClass('btnLogin').addClass('userInfo').html(sessionStorage.getItem('userInfo')).after('<a class="exit" href="javascript:void(0)">退出</a>');
+        }
+	});
+});
+</script>
+</head>
+<body>
+	<!-- 主页头部 -->
+	<div id="header">
+		
+	</div>
+	<section id="news">
+		<article>
+			<h2>摄影相关</h2>
+			<ul>
+				<li><a href="#">人文摄影二十一条军规(简单易学，实用)</a></li>
+				<li><a href="#">掌握摄影构图的艺术  作者：新摄影</a></li>
+				<li><a href="#">单反全教程</a></li>
+				<li><a href="#">单反相机手动拍摄技巧</a></li>
+				<li><a href="#">几款HDR摄影软件,拍摄风景后期制作必备</a></li>
+				<li><a href="#">《摄影小知识》</a></li>
+			</ul>
+		</article>
+	</section>
+	<!-- 页脚部分 -->
+	<footer id="footer">
+		
+	</footer>
+</body>
+</html>

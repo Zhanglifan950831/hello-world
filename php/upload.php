@@ -1,0 +1,24 @@
+<?php
+	header('Content-type:application/json;charset=utf-8');
+	//print_r($_FILES);
+	$filename=$_FILES['file']['name'];
+	$type=$_FILES['file']['type'];
+	$tmp_name=$_FILES['file']['tmp_name'];
+	$size=$_FILES['file']['size'];
+	$error=$_FILES['file']['error'];
+	$destination='../uploadFile/';
+	//将服务器上的临时文件移动指定目录下
+	//move_uploaded_file($tmp_name,$destination):将服务器上的临时文件移动到指定目录下
+	//叫什么名字，移动成功返回true，否则返回false
+	$Output=[];
+	if(file_exists($destination.$filename))
+	{
+		$Output['msg']="文件已上传!";
+	}
+	else
+	{
+		move_uploaded_file($tmp_name,$destination.$filename);
+		$Output['msg']="文件上传成功!";
+	}
+	echo json_encode($Output);
+?>

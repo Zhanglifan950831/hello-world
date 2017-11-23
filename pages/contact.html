@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>随便咯</title>
+<link rel="stylesheet" href="../css/reset.css" type="text/css">
+<link rel="stylesheet" href="../css/main.css" type="text/css">
+<script src="../js/jquery-3.1.1.min.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/contact.js"></script>
+</head>
+<body>
+	<!-- 主页头部 -->
+	<div id="header">
+		
+	</div>
+	<section id="note">
+		<article>
+			<h2>在线留言</h2>
+			<ul>
+				<li>
+					<label>主题:</label>
+					<input type="text" name="subject">
+					<span>(必填)</span>
+				</li>
+				<li>
+					<label>姓名:</label>
+					<input type="text" name="Name">
+					<span></span>
+				</li>
+				<li>
+					<label>电话:</label>
+					<input type="text" name="tel">
+					<span></span>
+				</li>
+				<li>
+					<label>邮箱:</label>
+					<input type="text" name="email">
+					<span>(必填)</span>
+				</li>
+				<li class="noteContent">
+					<label>内容:</label>
+					<textarea name="message" cols="30" rows="10" maxheight="200px"></textarea>
+					<span>(必填)</span>
+				</li>
+				<li>
+					<label>验证码:</label><input type="text" name="vCode">
+					<img src="../php/vCode.php" alt="验证码">
+					<a id="btnChange" href="javascript:void(0)">看不清换一张</a>
+				</li>
+				<li>
+					<label></label>
+					<input type="submit" value="提交">
+					<span></span>
+				</li>
+			</ul>
+		</article>
+	</section>
+	<!-- 页脚部分 -->
+	<footer id="footer">
+
+	</footer>
+</body>
+</html>

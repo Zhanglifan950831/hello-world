@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>随便咯</title>
+<link rel="stylesheet" href="../css/reset.css" type="text/css">
+<link rel="stylesheet" href="../css/main.css" type="text/css">
+<script src="../js/jquery-3.1.1.min.js"></script>
+<script src="../js/common.js"></script>
+<script>
+$(function(){
+	$('#header').load('header.php',function(){
+		$('#nav li:eq(1)>a').addClass('active');
+		if(sessionStorage.getItem('userInfo'))
+        {
+            $('#top a').removeClass('btnLogin').addClass('userInfo').html(sessionStorage.getItem('userInfo')).after('<a class="exit" href="javascript:void(0)">退出</a>');
+        }
+	});
+});
+</script>
+</head>
+<body>
+	<!-- 主页头部 -->
+	<div id="header">
+		
+	</div>
+	<section id="about">
+		<article>
+			<h2>关于我们</h2>
+			<p>
+				本站倡导快乐摄影，致力于营造最具亲和力和活力的摄影爱好者社区。经过多年的发展，网站聚合了近100万摄影发烧友，分布于全国各省份和主要一二级城市，是摄影爱好者交流、分享的大型互动平台。提供全方位影像资讯，传播影像文化，是品牌厂商最受推崇的网络媒体平台。
+			</p>
+			<p>
+				在影像大发展的今天，我们将继续引领影像新生活，为用户创造愉悦的在线体验，为品牌缔造更大的商业价值。
+			</p>
+			<p>
+				无论您使用何种器材、摄影水平如何，我们随时欢迎您加入！
+			</p>
+		</article>
+	</section>
+	<!-- 页脚部分 -->
+	<footer id="footer">
+		
+	</footer>
+</body>
+</html>
